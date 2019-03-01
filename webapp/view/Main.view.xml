@@ -1,0 +1,34 @@
+<mvc:View controllerName="com.fio.captcha.ZFIO_CAPTCHA.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" navButtonPress="onNavBack" showNavButton="true" title="Şifremi Unuttum">
+		<content>
+			<m:ObjectHeader xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout="sap.ui.layout" xmlns:form="sap.ui.layout.form" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" title="Şifremi Unuttum" id="oh1" responsive="true" showMarkers="false" markFlagged="true" markFavorite="true" backgroundDesign="Transparent" icon="sap-icon://search" intro="Aşağıdaki bilgileri doldurun ve gönderin. Yeni şifreniz e-mail ile size iletilecektir..."/>
+			<form:SimpleForm xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"  xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:form="sap.ui.layout.form" minWidth="1024" editable="true" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="5" emptySpanL="2" emptySpanM="2" columnsM="1" id="__form0">
+				<form:content>
+					<m:Label xmlns:m="sap.m" text="Kullanıcı Adı" design="Bold" id="__label0"/>
+					<m:Input xmlns:m="sap.m" width="100%" id="user_id" required="true" fieldWidth="100%"/>
+					<m:Label xmlns:m="sap.m" text="Kullanıcı E-Mail Adresi" design="Bold" id="__label1"/>
+					<m:Input xmlns:m="sap.m" width="100%" id="user_mail" required="true" fieldWidth="100%"/>
+					<m:Label xmlns:m="sap.m" text="Güvenlik Kodu" design="Bold" id="__label122"/>
+					<m:Input xmlns:m="sap.m" width="60%" id="captchaInpt" required="true" fieldWidth="100%"/>
+					<core:HTML content='&lt;canvas id=&quot;myCanvas&quot; &gt; &lt;/canvas&gt;'>  </core:HTML> 
+					<m:Button xmlns:m="sap.m" id="refresh" press="createCaptcha"  type="Accept" width="20%" icon="sap-icon://refresh" iconFirst="false"/> 
+	
+				</form:content>
+			</form:SimpleForm>
+			
+			<FlexBox width="100%" id="__box0" justifyContent="Center">
+				<items>
+				<m:Button xmlns:m="sap.m" id="arabtn" press="onLoading" text="Gönder" type="Accept" width="150px" icon="sap-icon://accept" iconFirst="false"/>
+				    
+				    </items>
+				<items/>
+			</FlexBox>
+		</content>
+	</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
